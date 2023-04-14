@@ -8,27 +8,18 @@
 </head>
 <body>
   <h1>Space Age Calculator</h1>
-  <form id="age-form">
-    <label for="age">Enter your age:</label>
-    <input type="number" id="age" name="age">
-    <button type="submit">Calculate</button>
-  </form>
-  <h2>Results:</h2>
-  <p>Your age on Earth is <span id="earth"></span> years.</p>
-  <p>Your age on Mercury is <span id="mercury"></span> years.</p>
-  <p>Your age on Venus is <span id="venus"></span> years.</p>
-  <p>Your age on Mars is <span id="mars"></span> years.</p>
-  <p>Your age on Jupiter is <span id="jupiter"></span> years.</p>
+  <form id="space-age-form">
+    <label for="age">Your age:</label>
+    <input type="number" id="age" name="age" min="0" step="1" required>
 
-  <h2>Age Since Birthday:</h2>
-  <form id="birthday-form">
-    <label for="birthdate">Enter your birthdate:</label>
-    <input type="date" id="birthdate" name="birthdate">
+    <label for="past-birthday">Past birthday age:</label>
+    <input type="number" id="past-birthday" name="past-birthday" min="0" step="1">
+
+    <label for="future-birthday">Future birthday age:</label>
+    <input type="number" id="future-birthday" name="future-birthday" min="0" step="1">
+
     <button type="submit">Calculate</button>
   </form>
-  <p>Your age on Mercury is <span id="mercury-birthday"></span> years since your last birthday on Mercury.</p>
-  <p>Your age on Venus is <span id="venus-birthday"></span> years since your last birthday on Venus.</p>
-  <p>Your age on Mars is <span id="mars-birthday"></span> years since your last birthday on Mars.</p>
-  <p>Your age on Jupiter is <span id="jupiter-birthday"></span> years since your last birthday on Jupiter.</p>
+  <div id="results"></div>
 </body>
 </html>
