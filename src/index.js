@@ -1,1 +1,1 @@
-import {} from './Super-Galactic.js';
+import { SpaceAge } from '../Super-Galactic.js';

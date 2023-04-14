@@ -1,4 +1,4 @@
-
+import { SpaceAge } from '../src/Super-Galactic.js';
 
 describe('SpaceAge', () => {
   let spaceAge;
@@ -10,7 +10,7 @@ describe('SpaceAge', () => {
   test('constructor sets age properly', () => {
     const age = 42;
     const spaceAge = new SpaceAge(age);
-    expect(spaceAge.onEarth()).toBe(age);
+    expect(spaceAge.age).toBe(age);
   });
 
 });
