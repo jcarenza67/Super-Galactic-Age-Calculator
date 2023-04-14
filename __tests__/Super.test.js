@@ -47,4 +47,9 @@ describe('SpaceAge', () => {
     const result = spaceAge.yearsPassed(20);
     expect(result.venusYears).toEqual(16);
   });
+
+  test('should return the correct years passed on Mars since a past birthday', () => {
+    const result = spaceAge.yearsPassed(20);
+    expect(result.marsYears).toEqual(5);
+  });
 });
