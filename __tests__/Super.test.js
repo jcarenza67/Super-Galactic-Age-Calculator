@@ -13,4 +13,7 @@ describe('SpaceAge', () => {
     expect(spaceAge.age).toBe(age);
   });
 
+  test('should correctly calculate age on Mercury', () => {
+    expect(spaceAge.mercuryAge()).toBe(125);
+  });
 });
