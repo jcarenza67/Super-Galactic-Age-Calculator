@@ -3,6 +3,10 @@ export class SpaceAge{
     this.age = age;
   }
 
+  earthAge() {
+    return this.age;
+  }
+
   mercuryAge() {
     return Math.round(this.age / .24);
   }
