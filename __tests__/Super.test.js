@@ -27,5 +27,5 @@ describe('SpaceAge', () => {
 
   test('should correctly calculate age on Jupiter', () => {
     expect(spaceAge.jupiterAge()).toBe(2);
-  }
+  });
 });
