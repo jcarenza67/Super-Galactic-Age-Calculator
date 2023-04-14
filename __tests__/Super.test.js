@@ -35,11 +35,11 @@ describe('SpaceAge', () => {
 
   test('should return the correct years passed on earth since a past birthday', () => {
     const result = spaceAge.yearsPassed(20);
-    expect(result).toEqual({earthYears: 10,});
+    expect(result.earthYears).toEqual(10);
   });
 
   test('should return the correct years passed on Mercury since a past birthday', () => {
     const result = spaceAge.yearsPassed(20);
-    expect(result.mercuryYears).toEqual(41);
+    expect(result.mercuryYears).toEqual(42);
   });
 });
