@@ -39,6 +39,7 @@ export class SpaceAge{
       mercuryYears: Math.round(earthLeft / .24),
       venusYears: Math.round(earthLeft / .62),
       marsYears: Math.round(earthLeft / 1.88),
+      jupiterYears: Math.round(earthLeft / 11.86),
     };
   }
 }
