@@ -22,6 +22,9 @@ export class SpaceAge{
   jupiterAge() {
     return Math.round(this.age / 11.86);
   }
-  
 
+  yearsPassed(pastBirthday) {
+    const earthYears = this.age - pastBirthday;
+    return {earthYears,};
+  }
 }

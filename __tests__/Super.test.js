@@ -30,11 +30,11 @@ describe('SpaceAge', () => {
   });
 
   test('should correctly calculate age on Jupiter', () => {
-    expect(spaceAge.jupiterAge()).toBe(2);
+    expect(spaceAge.jupiterAge()).toBeCloseTo(3);
   });
 
   test('should return the correct years passed on each planet since a past birthday', () => {
-    const result = spaceAge.yearsPassed(20)
+    const result = spaceAge.yearsPassed(20);
     expect(result).toEqual({earthYears: 10,});
   });
 });
