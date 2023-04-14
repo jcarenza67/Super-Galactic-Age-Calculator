@@ -42,4 +42,9 @@ describe('SpaceAge', () => {
     const result = spaceAge.yearsPassed(20);
     expect(result.mercuryYears).toEqual(42);
   });
+
+  test('should return the correct years passed on Venus since a past birthday', () => {
+    const result = spaceAge.yearsPassed(20);
+    expect(result.venusYears).toEqual(16);
+  });
 });
