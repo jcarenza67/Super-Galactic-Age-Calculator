@@ -18,7 +18,7 @@
 ## Description
 
 _This program will take a user's age and return their age on Mercury, Venus, Mars, and Jupiter.
-It will also tell them who many years until their next inputted birthday and how many years have passed since their last inputted birthday.
+It will also tell them how many years until their next inputted birthday and how many years have passed since their last inputted birthday.
 ###Example: Joe is 30 years old but on Mars he is 125 years old relative to Earth years###_
 
 ## Links
