@@ -8,10 +8,16 @@
 </head>
 <body>
   <h1>Space Age Calculator</h1>
-  <p>Enter your age in Earth years:</p>
-  <input type="number" id="age" />
-  <button id="calculate">Calculate</button>
-  <p id="result"></p>
-  <script src="index.js"></script>
+  <form>
+    <label for="birthdate">Enter your birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate">
+    <button type="submit">Calculate</button>
+  </form>
+  <h2>Results:</h2>
+  <p>Your age on Earth is <span id="earth"></span> years.</p>
+  <p>Your age on Mercury is <span id="mercury"></span> years.</p>
+  <p>Your age on Venus is <span id="venus"></span> years.</p>
+  <p>Your age on Mars is <span id="mars"></span> years.</p>
+  <p>Your age on Jupiter is <span id="jupiter"></span> years.</p>
 </body>
 </html>
