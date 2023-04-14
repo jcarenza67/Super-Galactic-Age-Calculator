@@ -52,4 +52,9 @@ describe('SpaceAge', () => {
     const result = spaceAge.yearsPassed(20);
     expect(result.marsYears).toEqual(5);
   });
+
+  test('should return the correct years passed on Jupiter since a past birthday', () => {
+    const result = spaceAge.yearsPassed(20);
+    expect(result.jupiterYears).toEqual(1);
+  });
 });
