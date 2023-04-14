@@ -12,31 +12,16 @@ function planetAge () {
   document.getElementById('mars').textContent = spaceAge.marsAge();
   document.getElementById('jupiter').textContent = spaceAge.jupiterAge();
 
-  const birthdate = prompt("Enter your birthdate (YYYY-MM-DD):");
 
+  const spaceAgeSinceBirthday = new SpaceAge(planetAge(birthdate));
 
-  const earthBirthdate = new Date(birthdate);
+  document.getElementById('mercury-birthday').textContent = spaceAgeSinceBirthday.mercuryAge();
+  document.getElementById('venus-birthday').textContent = spaceAgeSinceBirthday.venusAge();
+  document.getElementById('mars-birthday').textContent = spaceAgeSinceBirthday.marsAge();
+  document.getElementById('jupiter-birthday').textContent = spaceAgeSinceBirthday.jupiterAge();
+
 
   
-  const earthTime = new Date();
-  const earthDiff = earthTime.getTime() - earthBirthdate.getTime();
-  const earthAge = Math.floor(earthDiff / (1000 * 60 * 60 * 24 * 365.25));
-
-  
-  const myAge = new SpaceAge(earthAge);
-  const mercuryAge = myAge.mercuryAge();
-  const venusAge = myAge.venusAge();
-  const marsAge = myAge.marsAge();
-  const jupiterAge = myAge.jupiterAge();
-
-  
-  const result = `Your age on Mercury is ${mercuryAge} years.
-  \nYour age on Venus is ${venusAge} years.
-  \nYour age on Mars is ${marsAge} years.
-  \nYour age on Jupiter is ${jupiterAge} years.
-  \nYour age on Earth is ${earthAge} years.`;
-  alert(result);
-
 }
 
 window.addEventListener('DOMContentLoaded', () => {
