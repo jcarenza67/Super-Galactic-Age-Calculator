@@ -72,4 +72,9 @@ describe('SpaceAge', () => {
     const result = spaceAge.yearsLeft(100);
     expect(result.venusYears).toEqual(113);
   });
+
+  test('should return the correct years left until next birthday on Mars', () => {
+    const result = spaceAge.yearsLeft(100);
+    expect(result.marsYears).toEqual(38);
+  });
 });
