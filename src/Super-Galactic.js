@@ -34,6 +34,7 @@ export class SpaceAge{
 
   yearsLeft(futureBirthday) {
     const earthLeft = futureBirthday - this.age;
-    return {earthYears: earthLeft,};
+    return {earthYears: earthLeft,
+      mercuryYears: Math.round(earthLeft / .24),};
   }
 }
