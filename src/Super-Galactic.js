@@ -29,12 +29,15 @@ export class SpaceAge{
       mercuryYears: Math.round(earthYears / .24),
       venusYears: Math.round(earthYears / .62),
       marsYears: Math.round(earthYears / 1.88),
-      jupiterYears: Math.round(earthYears / 11.86)};
+      jupiterYears: Math.round(earthYears / 11.86),
+    };
   }
 
   yearsLeft(futureBirthday) {
     const earthLeft = futureBirthday - this.age;
     return {earthYears: earthLeft,
-      mercuryYears: Math.round(earthLeft / .24),};
+      mercuryYears: Math.round(earthLeft / .24),
+      venusYears: Math.round(earthLeft / .62),
+    };
   }
 }
