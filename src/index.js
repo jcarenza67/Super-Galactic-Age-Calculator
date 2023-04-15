@@ -1,7 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { SpaceAge } from '../Super-Galactic.js';
+import { SpaceAge } from './Super-Galactic.js';
 
 window.addEventListener('load', function() {
   this.document.getElementById('age-form').addEventListener('submit', function(event) {
