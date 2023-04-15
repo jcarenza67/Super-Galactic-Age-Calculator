@@ -4,15 +4,15 @@ import './css/styles.css';
 import { SpaceAge } from './Super-Galactic.js';
 
 window.addEventListener('load', function() {
-  this.document.getElementById('age-form').addEventListener('submit', function(event) {
+  this.document.getElementById('space-age-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const ageInput = document.getElementById('age');
     const pastBirthdayInput = document.getElementById('past-birthday');
     const futureBirthdayInput = document.getElementById('future-birthday');
 
     const age = parseInt(ageInput.value, 10);
-    const pastBirthday = pastBirthdayInput.value ? parseInt(pastBirthdayInput.value, 10): null;
-    const futureBirthday = parseInt(futureBirthdayInput.value, 10);
+    const pastBirthday = pastBirthdayInput.value ? new Date(pastBirthdayInput.value, 10): null;
+    const futureBirthday = futureBirthdayInput ? new Date(futureBirthdayInput.value, 10): null;
 
     const spaceAge = new SpaceAge(age);
 
@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
       <p>Age on Mars: ${spaceAge.marsYears()}</p>
       <p>Age on Jupiter: ${spaceAge.jupiterYears()}</p>`;
 
-    if (pastBirthday !== null) {
+    if (!pastBirthday) return null; {
       const yearsPassed = spaceAge.yearsPassed(pastBirthday);
       resultsElement.innerHTML += `
         <h2>Years passed since your past birthday!</h2>
@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
         <p>Jupiter: ${yearsPassed.jupiterYears}</p>`;
     }
 
-    if (futureBirthday !== null) {
+    if (!futureBirthday) return null; {
       const yearsLeft = spaceAge.yearsLeft(futureBirthday);
       resultsElement.innerHTML += `
         <h2>Years left until your future birthday!</h2>
