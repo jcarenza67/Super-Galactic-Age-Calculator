@@ -111,5 +111,5 @@ describe('SpaceAge', () => {
     const futureBirthday = new Date('2041-09-28');
     const yearsLeft = spaceAge.yearsLeft(futureBirthday);
     expect(yearsLeft.venusYears).toBeGreaterThanOrEqual(29);
-  }
+  });
 });
