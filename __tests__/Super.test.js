@@ -73,17 +73,15 @@ describe('SpaceAge', () => {
     expect(yearsPassed.marsYears).toBeGreaterThanOrEqual(4);
   });
 
-  //   test('should return the correct years passed on Jupiter since a past birthday based on users bday', () => {
-  //     const userBirthday = new Date('1991-09-28');
-  //     const currentDate = new Date();
-  //     const milliseconds = currentDate - userBirthday;
-  //     const age = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
+  test('should return the correct years passed on Jupiter since a past birthday based on users bday', () => {
+    const userBirthday = new Date('1991-09-28');
+    const age = 31;
 
-  //     const spaceAge = new SpaceAge(age);
-  //     const pastBirthday = new Date('2000-09-28');
-  //     const yearsPassed = spaceAge.yearsPassed(pastBirthday);
-  //     expect(yearsPassed.jupiterYears).toBeGreaterThanOrEqual(1);
-  //   });
+    const spaceAge = new SpaceAge(age, userBirthday);
+    const pastBirthday = new Date('2000-09-28');
+    const yearsPassed = spaceAge.yearsPassed(pastBirthday);
+    expect(yearsPassed.jupiterYears).toBeGreaterThanOrEqual(1);
+  });
 
   //   test('should return the correct years left until the users future birthday on Earth', () => {
   //     const userBirthday = new Date('1991-09-28');
