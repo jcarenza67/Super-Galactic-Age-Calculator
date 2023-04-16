@@ -43,6 +43,7 @@ export class SpaceAge{
     const earthYears = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
 
     return { earthYears,
+      mercuryYears: Math.round(earthYears / .24),
     };
   }
 }
