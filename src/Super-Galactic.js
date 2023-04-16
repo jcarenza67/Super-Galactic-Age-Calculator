@@ -1,7 +1,6 @@
 export class SpaceAge{
-  constructor(age, userBirthday) {
+  constructor(age) {
     this.age = age;
-    this.userBirthday = userBirthday;
   }
 
   earthAge() {
@@ -25,28 +24,22 @@ export class SpaceAge{
   }
 
   yearsPassed(pastBirthday) {
-    const userBirthday = this.userBirthday;
-    const milliseconds = pastBirthday - userBirthday;
-    const earthYears = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
-
-    return { earthYears,
+    const earthYears = this.age - pastBirthday;
+    return {earthYears,
       mercuryYears: Math.round(earthYears / .24),
       venusYears: Math.round(earthYears / .62),
       marsYears: Math.round(earthYears / 1.88),
-      jupiterYears: Math.round(earthYears / 11.86)
+      jupiterYears: Math.round(earthYears / 11.86),
     };
   }
-
   yearsLeft(futureBirthday) {
-    const userBirthday = this.userBirthday;
-    const milliseconds = futureBirthday - userBirthday;
-    const earthYears = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
-
-    return { earthYears,
-      mercuryYears: Math.round(earthYears / .24),
-      venusYears: Math.round(earthYears / .62),
-      marsYears: Math.round(earthYears / 1.88),
-      jupiterYears: Math.round(earthYears / 11.86)
+    const earthLeft = futureBirthday - this.age;
+    return {earthYears: earthLeft,
+      mercuryYears: Math.round(earthLeft / .24),
+      venusYears: Math.round(earthLeft / .62),
+      marsYears: Math.round(earthLeft / 1.88),
+      jupiterYears: Math.round(earthLeft / 11.86),
     };
   }
+
 }
