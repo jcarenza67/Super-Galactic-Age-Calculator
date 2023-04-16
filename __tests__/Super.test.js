@@ -56,4 +56,16 @@ describe('SpaceAge', () => {
     const yearsPassed = spaceAge.yearsPassed(pastBirthday);
     expect(yearsPassed.mercuryYears).toBeGreaterThanOrEqual(33);
   });
+
+  test('should return the correct years passed on Venus since a past birthday based on users bday', () => {
+    const userBirthday = new Date('1991-09-28');
+    const currentDate = new Date();
+    const milliseconds = currentDate - userBirthday;
+    const age = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
+
+    const spaceAge = new SpaceAge(age);
+    const pastBirthday = new Date('2000-09-28');
+    const yearsPassed = spaceAge.yearsPassed(pastBirthday);
+    expect(yearsPassed.venusYears).toBeGreaterThanOrEqual(13);
+  });
 });
