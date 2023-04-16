@@ -92,4 +92,16 @@ describe('SpaceAge', () => {
     const yearsPassed = spaceAge.yearsPassed(pastBirthday);
     expect(yearsPassed.jupiterYears).toBeGreaterThanOrEqual(1);
   });
+
+  test('should return the correct years left until the users future birthday on Earth', () => {
+    const userBirthday = new Date('1991-09-28');
+    const currentDate = new Date();
+    const milliseconds = currentDate - userBirthday;
+    const age = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
+
+    const spaceAge = new SpaceAge(age);
+    const futureBirthday = new Date('2041-09-28');
+    const yearsLeft = spaceAge.yearsLeft(futureBirthday);
+    expect(yearsLeft.earthYears).toBeGreaterThanOrEqual(50);
+  });
 });
