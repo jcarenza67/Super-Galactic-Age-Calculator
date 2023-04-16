@@ -30,6 +30,7 @@ export class SpaceAge{
 
     return {earthYears,
       mercuryYears: Math.round(earthYears / .24),
+      venusYears: Math.round(earthYears / .62),
     };
   }          
 }
