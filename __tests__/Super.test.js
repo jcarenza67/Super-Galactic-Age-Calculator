@@ -122,4 +122,14 @@ describe('SpaceAge', () => {
     const yearsLeft = spaceAge.yearsLeft(futureBirthday);
     expect(yearsLeft.marsYears).toBeGreaterThanOrEqual(9);
   });
+
+  test('should return the correct years left until the users future birthday on Jupiter', () => {
+    const userBirthday = new Date('1991-09-28');
+    const age = 31;
+
+    const spaceAge = new SpaceAge(age, userBirthday);
+    const futureBirthday = new Date('2041-09-28');
+    const yearsLeft = spaceAge.yearsLeft(futureBirthday);
+    expect(yearsLeft.jupiterYears).toBeGreaterThanOrEqual(2);
+  });
 });
