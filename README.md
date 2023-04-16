@@ -6,13 +6,14 @@
 
 ## Technologies Used
 
-* _Linter_
-* _babel_
-* _webpack_
+* _ESlint_
+* _Babel_
+* _Webpack_
+* _Node.js_
 * _npm_
-* _html_
-* _javascript_
-* _jist_
+* _HTML_
+* _JavaScript_
+* _Jest_
 
 
 ## Description
