@@ -36,4 +36,13 @@ export class SpaceAge{
       jupiterYears: Math.round(earthYears / 11.86)
     };
   }
+
+  yearsLeft(futureBirthday) {
+    const userBirthday = this.userBirthday;
+    const milliseconds = futureBirthday - userBirthday;
+    const earthYears = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
+
+    return { earthYears,
+    };
+  }
 }
