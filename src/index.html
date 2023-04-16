@@ -9,15 +9,12 @@
 <body>
   <h1>Space Age Calculator</h1>
   <form id="space-age-form">
-    <label for="age">Your age:</label>
-    <input type="number" id="age" name="age" min="0" step="1" required>
-
+    <label for="birthdate">Your birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
     <label for="past-birthday">Past birthday date:</label>
     <input type="date" id="past-birthday" name="past-birthday" min="0" step="1">
-
     <label for="future-birthday">Future birthday date:</label>
     <input type="date" id="future-birthday" name="future-birthday" min="0" step="1">
-
     <button type="submit" id="calculateBtn">Calculate</button>
   </form>
   <div id="results"></div>
