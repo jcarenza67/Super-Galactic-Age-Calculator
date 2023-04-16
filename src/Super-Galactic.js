@@ -24,22 +24,11 @@ export class SpaceAge{
   }
 
   yearsPassed(pastBirthday) {
-    const earthYears = this.age - pastBirthday;
-    return {earthYears,
-      mercuryYears: Math.round(earthYears / .24),
-      venusYears: Math.round(earthYears / .62),
-      marsYears: Math.round(earthYears / 1.88),
-      jupiterYears: Math.round(earthYears / 11.86),
-    };
-  }
+    const currentDate = new Date();
+    const milliseconds =  currentDate - pastBirthday;
+    const earthYears = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
 
-  yearsLeft(futureBirthday) {
-    const earthLeft = futureBirthday - this.age;
-    return {earthYears: earthLeft,
-      mercuryYears: Math.round(earthLeft / .24),
-      venusYears: Math.round(earthLeft / .62),
-      marsYears: Math.round(earthLeft / 1.88),
-      jupiterYears: Math.round(earthLeft / 11.86),
+    return {earthYears,
     };
-  }
+  }          
 }
