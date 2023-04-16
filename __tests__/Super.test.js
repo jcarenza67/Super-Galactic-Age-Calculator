@@ -13,6 +13,11 @@ describe('SpaceAge', () => {
     expect(spaceAge.age).toBe(age);
   });
 
+  test ('should calculate the users age based on their birthday', () => {
+    const spaceAge = new SpaceAge('1991-09-28');
+    const age = spaceAge.calculateAge;
+    expect(age).toBe(31);
+
   test('should correctly calculate age on Earth', () => {
     expect(spaceAge.earthAge()).toBe(30);
   });
