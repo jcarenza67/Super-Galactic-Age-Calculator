@@ -93,15 +93,13 @@ describe('SpaceAge', () => {
     expect(yearsLeft.earthYears).toBeGreaterThanOrEqual(18);
   });
 
-  //   test('should return the correct years left until the users future birthday on Mercury', () => {
-  //     const userBirthday = new Date('1991-09-28');
-  //     const currentDate = new Date();
-  //     const milliseconds = currentDate - userBirthday;
-  //     const age = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
+  test('should return the correct years left until the users future birthday on Mercury', () => {
+    const userBirthday = new Date('1991-09-28');
+    const age = 31;
 
-  //     const spaceAge = new SpaceAge(age);
-  //     const futureBirthday = new Date('2041-09-28');
-  //     const yearsLeft = spaceAge.yearsLeft(futureBirthday);
-  //     expect(yearsLeft.mercuryYears).toBeGreaterThanOrEqual(75);
-  //   });
+    const spaceAge = new SpaceAge(age, userBirthday);
+    const futureBirthday = new Date('2041-09-28');
+    const yearsLeft = spaceAge.yearsLeft(futureBirthday);
+    expect(yearsLeft.mercuryYears).toBeGreaterThanOrEqual(75);
+  });
 });
