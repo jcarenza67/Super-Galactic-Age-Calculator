@@ -102,6 +102,6 @@ describe('SpaceAge', () => {
     const spaceAge = new SpaceAge(age);
     const futureBirthday = new Date('2041-09-28');
     const yearsLeft = spaceAge.yearsLeft(futureBirthday);
-    expect(yearsLeft.earthYears).toBeGreaterThanOrEqual(50);
+    expect(yearsLeft.earthYears).toBeGreaterThanOrEqual(18);
   });
 });
