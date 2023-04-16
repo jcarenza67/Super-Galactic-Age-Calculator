@@ -90,6 +90,6 @@ describe('SpaceAge', () => {
     const spaceAge = new SpaceAge(age);
     const pastBirthday = new Date('2000-09-28');
     const yearsPassed = spaceAge.yearsPassed(pastBirthday);
-    expect(yearsPassed.jupiterYears).toBeLessThanOrEqual(1);
+    expect(yearsPassed.jupiterYears).toBeGreaterThanOrEqual(1);
   });
 });
