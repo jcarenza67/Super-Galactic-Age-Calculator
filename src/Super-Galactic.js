@@ -1,6 +1,7 @@
 export class SpaceAge{
-  constructor(age) {
+  constructor(age, userBirthday) {
     this.age = age;
+    this.userBirthday = userBirthday;
   }
 
   earthAge() {
@@ -23,4 +24,12 @@ export class SpaceAge{
     return Math.round(this.age / 11.86);
   }
 
+  yearsPassed(pastBirthday) {
+    const userBirthday = this.userBirthday;
+    const milliseconds = pastBirthday - userBirthday;
+    const earthYears = Math.floor(milliseconds / (1000 * 60 * 60 * 24 * 365.25));
+
+    return { earthYears,
+    };
+  }
 }

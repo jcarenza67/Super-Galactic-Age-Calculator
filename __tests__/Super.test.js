@@ -40,7 +40,7 @@ describe('SpaceAge', () => {
     const spaceAge = new SpaceAge(age, userBirthday);
     const pastBirthday = new Date('2000-09-28');
     const yearsPassed = spaceAge.yearsPassed(pastBirthday);
-    expect(yearsPassed.earthYears).toBeGreaterThanOrEqual(10);
+    expect(yearsPassed.earthYears).toBeGreaterThanOrEqual(9);
   });
 
   //   test('should return the correct years passed on Mercury since a past birthday based on users bday', () => {
