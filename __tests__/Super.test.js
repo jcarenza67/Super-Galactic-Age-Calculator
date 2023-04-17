@@ -73,7 +73,7 @@ describe('SpaceAge', () => {
 
   test('should return the correct years left until next birthday on Jupiter', () => {
     const result = spaceAge.yearsLeft(100);
-    expect(result.jupiterYears).toEqual(6);
+    expect(result.jupiterYears).toEqual(5.90);
   
   });
 });
