@@ -16,7 +16,7 @@ export class SpaceAge{
   }
 
   marsAge() {
-    return Math.round(this.age / 1.88);
+    return parseFloat((this.age / 1.88).toFixed(2));
   }
 
   jupiterAge() {
