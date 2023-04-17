@@ -29,7 +29,7 @@ export class SpaceAge{
     const earthYears = this.age - pastBirthday;
     return {earthYears,
       mercuryYears: parseFloat((earthYears / .24).toFixed(2)),
-      venusYears: Math.round(earthYears / .62),
+      venusYears: parseFloat((earthYears / .62).toFixed(2)),
       marsYears: Math.round(earthYears / 1.88),
       jupiterYears: Math.round(earthYears / 11.86),
     };
