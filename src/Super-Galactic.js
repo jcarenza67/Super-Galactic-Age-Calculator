@@ -1,5 +1,3 @@
-import { parse } from "@babel/core";
-
 export class SpaceAge{
   constructor(age) {
     this.age = age;
