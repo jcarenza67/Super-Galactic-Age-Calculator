@@ -59,7 +59,7 @@ describe('SpaceAge', () => {
   });
   test('should return the correct years left until next birthday on Mercury', () => {
     const result = spaceAge.yearsLeft(100);
-    expect(result.mercuryYears).toEqual(292);
+    expect(result.mercuryYears).toEqual(291.67);
   });
   test('should return the correct years left until next birthday on Venus', () => {
     const result = spaceAge.yearsLeft(100);
