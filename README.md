@@ -12,6 +12,7 @@
 * _Node.js_
 * _npm_
 * _HTML_
+* _CSS_
 * _JavaScript_
 * _Jest_
 
