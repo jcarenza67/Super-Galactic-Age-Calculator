@@ -1,3 +1,5 @@
+import { parse } from "@babel/core";
+
 export class SpaceAge{
   constructor(age) {
     this.age = age;
@@ -20,7 +22,7 @@ export class SpaceAge{
   }
 
   jupiterAge() {
-    return Math.round(this.age / 11.86);
+    return parseFloat((this.age / 11.86).toFixed(2));
   }
 
   yearsPassed(pastBirthday) {
