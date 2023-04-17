@@ -8,11 +8,11 @@ export class SpaceAge{
   }
 
   mercuryAge() {
-    return Math.round(this.age / .24);
+    return parseFloat((this.age / .24).toFixed(2));
   }
 
   venusAge() {
-    return Math.round(this.age / .62);
+    return parseFloat((this.age / .62).toFixed(2));
   }
 
   marsAge() {
