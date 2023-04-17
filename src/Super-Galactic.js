@@ -31,7 +31,7 @@ export class SpaceAge{
       mercuryYears: parseFloat((earthYears / .24).toFixed(2)),
       venusYears: parseFloat((earthYears / .62).toFixed(2)),
       marsYears: parseFloat((earthYears / 1.88).toFixed(2)),
-      jupiterYears: Math.round(earthYears / 11.86),
+      jupiterYears: parseFloat((earthYears / 11.86).toFixed(2)),
     };
   }
   yearsLeft(futureBirthday) {
