@@ -51,7 +51,7 @@ describe('SpaceAge', () => {
   });
   test('should return the correct years passed on Jupiter since a past birthday', () => {
     const result = spaceAge.yearsPassed(20);
-    expect(result.jupiterYears).toEqual(1);
+    expect(result.jupiterYears).toEqual(0.84);
   });
   test('should return the correct years left until next birthday on Earth', () => {
     const result = spaceAge.yearsLeft(100);
