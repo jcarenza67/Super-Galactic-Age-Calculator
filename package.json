@@ -1,5 +1,5 @@
 {
-  "name": "Super-Galactic-Age-Calculator",
+  "name": "super-galactic-age-calculator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "build": "webpack --mode=development",
     "start": "npm run build && webpack-dev-server --open --mode=development",
     "lint": "eslint src --ext .js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
